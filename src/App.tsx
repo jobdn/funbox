@@ -6,7 +6,7 @@ import mainBg from "./assets/main-bg.png";
 
 const StyledApp = styled.div`
   background: url(${mainBg}) center/cover no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 `;
 

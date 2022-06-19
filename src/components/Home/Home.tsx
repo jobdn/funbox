@@ -18,12 +18,12 @@ const HomeTitle = styled(Typography.Text)`
 export const Home: React.FC = () => {
   return (
     <StyledHome>
-      <Row justify="center">
-        <Col style={{ textAlign: "center" }}>
+      <Row justify="center" style={{ marginBottom: "25px" }}>
+        <Col>
           <HomeTitle>Ты сегодня покормил кота?</HomeTitle>
         </Col>
       </Row>
-      <Row>
+      <Row justify="space-around">
         <Col>
           <Card />
         </Col>
