@@ -50,6 +50,7 @@ export const Card: React.FC<ICardProps> = ({ product }) => {
             <a
               href={product.link.href}
               target="_blank"
+              rel="noreferrer"
               className="subtitle__link"
             >
               {product.link.label}

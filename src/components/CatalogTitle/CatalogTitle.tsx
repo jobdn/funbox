@@ -8,7 +8,7 @@ const StyledCatalogTitle = styled(Typography.Text)`
   font-size: 36px;
   line-height: 44px;
   @media screen and (max-width: 768px) {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 40px;
   }
 `;

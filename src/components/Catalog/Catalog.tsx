@@ -1,31 +1,24 @@
 import React from "react";
-import { Col, Row } from "antd";
 import styled from "styled-components";
 
-import { Card } from "../Card";
 import { ProductPagination } from "../ProductPagination";
 import { CatalogTitle } from "../CatalogTitle";
-
-import store from "../../store";
+import { CatalogContent } from "../CatalogContent";
 
 const StyledCatalog = styled.div`
   padding-top: 47px;
+  @media screen and (max-width: 425px) {
+    padding-top: 17px;
+  }
 `;
 
 export const Catalog: React.FC = () => {
   const [page, setPage] = React.useState(1);
-  console.log(page);
 
   return (
     <StyledCatalog>
       <CatalogTitle />
-      <Row justify="space-around">
-        {store.products.map((product, index) => (
-          <Col key={index}>
-            <Card product={product} />
-          </Col>
-        ))}
-      </Row>
+      <CatalogContent currentPage={page} />
       <ProductPagination currentPage={page} handleChange={setPage} />
     </StyledCatalog>
   );
