@@ -196,8 +196,6 @@ const productsSlice = createSlice({
   initialState,
   reducers: {
     selectProduct(state: IProductsState, action: PayloadAction<number>) {
-      console.log("click: ", action.payload);
-
       state.products[action.payload - 1].isSelected =
         !state.products[action.payload - 1].isSelected;
     },
