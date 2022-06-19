@@ -14,12 +14,18 @@ export const Card: React.FC<ICardProps> = ({ product }) => {
   const productClass = product.isAvailable
     ? "product"
     : "product product_not-available";
+  const cardClass = product.color === "pink" ? "card card_pink-bg" : "card";
+  const productLabelClass =
+    product.label.color === "pink"
+      ? "product__label product__label_pink-color"
+      : "product__label";
+
   return (
     <div className={productClass}>
-      <div className="card">
+      <div className={cardClass}>
         <div className="card__container">
           <div className="product__info">
-            <div className="product__label">{product.label.name}</div>
+            <div className={productLabelClass}>{product.label.name}</div>
             <div className="product__title">
               Нямушка <span className="product__taste">{product.taste}</span>
             </div>
