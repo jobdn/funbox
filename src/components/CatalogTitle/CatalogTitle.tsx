@@ -5,7 +5,7 @@ import styled from "styled-components";
 const StyledCatalogTitle = styled(Row)`
   margin-bottom: 80px;
   @media screen and (max-width: 768px) {
-    margin-bottom: 30px;
+    margin: 30px 0;
   }
 
   /* ant */

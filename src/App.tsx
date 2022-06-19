@@ -17,7 +17,7 @@ const StyledApp = styled(Row)`
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <StyledApp align="middle">
+      <StyledApp align="middle" justify="center">
         <Catalog />
       </StyledApp>
     </Provider>
