@@ -4,40 +4,52 @@ import "./Card.scss";
 
 import cat from "../../assets/cat.png";
 
-export const Card: React.FC = () => {
+import { IProduct } from "../../store";
+
+interface ICardProps {
+  product: IProduct;
+}
+
+export const Card: React.FC<ICardProps> = ({ product }) => {
+  const productClass = product.isAvailable
+    ? "product"
+    : "product product_not-available";
   return (
-    <div className="product">
+    <div className={productClass}>
       <div className="card">
         <div className="card__container">
           <div className="card__info">
-            <div className="card__label">Сказочное заморское явство</div>
+            <div className="card__label">{product.label.name}</div>
             <div className="card__title">
-              Нямушка <span className="variety">с фуагра</span>
+              {/* variety => taste */}
+              Нямушка <span className="variety">{product.variety}</span>
             </div>
             <div className="card__desc">
-              <span className="portion-amount">10</span>
+              <span className="portion-amount">{product.portionAmount}</span>
               порций
               <br />
-              <div className="figt">мышь в подарок</div>
+              <div className="gift">{product.gift}</div>
             </div>
           </div>
           <img className="card__img" src={cat} alt="cat" />
           <div className="product__weight weight">
-            <div className="weight__value">0,5</div>
+            <div className="weight__value">{product.weight}</div>
             <div className="weight__measure">кг</div>
           </div>
         </div>
       </div>
       <div className="product__subtitle subtitle">
         <div className="subtitle__text">
-          Чего сидишь? Порадуй котэ,
-          <a
-            href="https://github.com/jobdn/funbox"
-            target="_blank"
-            className="subtitle__link"
-          >
-            купи.
-          </a>
+          {product.subtitleText}
+          {product.link ? (
+            <a
+              href={product.link.href}
+              target="_blank"
+              className="subtitle__link"
+            >
+              {product.link.label}
+            </a>
+          ) : null}
         </div>
       </div>
     </div>

@@ -1,5 +1,24 @@
 $blue: #2ea8e6;
 .product {
+  transition: 0.3s;
+  user-select: none;
+  cursor: pointer;
+  margin: 0 15px 40px;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &_not-available {
+    .card {
+      filter: grayscale(80%);
+      color: #b3b3b3 !important;
+    }
+    .subtitle {
+      color: rgba(255, 255, 102, 1) !important;
+    }
+  }
+
   .card {
     width: 320px;
     height: 480px;

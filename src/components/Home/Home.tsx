@@ -1,7 +1,10 @@
 import React from "react";
 import { Col, Row, Typography } from "antd";
 import styled from "styled-components";
+
 import { Card } from "../Card";
+
+import store from "../../store";
 
 const StyledHome = styled.div`
   padding-top: 47px;
@@ -24,9 +27,14 @@ export const Home: React.FC = () => {
         </Col>
       </Row>
       <Row justify="space-around">
-        <Col>
+        {/* <Col>
           <Card />
-        </Col>
+        </Col> */}
+        {store.map((product) => (
+          <Col>
+            <Card product={product} />
+          </Col>
+        ))}
       </Row>
     </StyledHome>
   );
