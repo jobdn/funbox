@@ -38,48 +38,49 @@ $blue: #2ea8e6;
       border-radius: 12px;
       overflow: hidden;
     }
-
-    font-family: "Trebuchet MS";
-    &__info {
-      padding: 21px 0 0 51px;
-    }
-
-    &__label {
-      color: #666;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 19px;
-    }
-
-    &__title {
-      font-weight: 700;
-      font-size: 48px;
-      line-height: 56px;
-      span {
-        display: block;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-      }
-    }
-    &__desc {
-      span {
-        font-weight: 700;
-        margin-right: 3px;
-      }
-      color: #666;
-      margin-top: 15px;
-      font-weight: 100;
-      font-size: 14px;
-      line-height: 16px;
-    }
-
     &__img {
       width: 120%;
       position: absolute;
       bottom: -20%;
       left: -11%;
     }
+  }
+
+  font-family: "Trebuchet MS";
+
+  &__info {
+    padding: 21px 0 0 51px;
+  }
+
+  &__label {
+    color: #666;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    span {
+      display: block;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  &__desc {
+    span {
+      font-weight: 700;
+      margin-right: 3px;
+    }
+    color: #666;
+    margin-top: 15px;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 16px;
+    width: 127px;
   }
 
   &__weight {

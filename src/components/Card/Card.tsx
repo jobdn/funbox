@@ -18,17 +18,16 @@ export const Card: React.FC<ICardProps> = ({ product }) => {
     <div className={productClass}>
       <div className="card">
         <div className="card__container">
-          <div className="card__info">
-            <div className="card__label">{product.label.name}</div>
-            <div className="card__title">
-              {/* variety => taste */}
-              Нямушка <span className="variety">{product.variety}</span>
+          <div className="product__info">
+            <div className="product__label">{product.label.name}</div>
+            <div className="product__title">
+              Нямушка <span className="product__taste">{product.taste}</span>
             </div>
-            <div className="card__desc">
-              <span className="portion-amount">{product.portionAmount}</span>
+            <div className="product__desc">
+              <span className="product__amount">{product.portionAmount}</span>
               порций
               <br />
-              <div className="gift">{product.gift}</div>
+              <div className="product__gift">{product.gift}</div>
             </div>
           </div>
           <img className="card__img" src={cat} alt="cat" />

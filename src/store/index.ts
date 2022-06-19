@@ -1,6 +1,6 @@
 export interface IProduct {
   label: ILabel;
-  variety: string;
+  taste: string;
   portionAmount: number;
   gift: string;
   weight: string;
@@ -26,7 +26,7 @@ interface ILabel {
 const store: IProduct[] = [
   {
     label: { color: "grey", name: "Сказочное заморское явство" },
-    variety: "C фуа-гра",
+    taste: "C фуа-гра",
     portionAmount: 10,
     gift: "мышь в подарок",
     weight: "0,5",
@@ -36,7 +36,7 @@ const store: IProduct[] = [
   },
   {
     label: { color: "grey", name: "Сказочное заморское явство" },
-    variety: "C рыбой",
+    taste: "C рыбой",
     portionAmount: 40,
     gift: "2 мыши в подарок",
     weight: "2",
@@ -50,7 +50,7 @@ const store: IProduct[] = [
   },
   {
     label: { color: "grey", name: "Сказочное заморское явство" },
-    variety: "C курой",
+    taste: "C курой",
     portionAmount: 100,
     gift: "5 мышей в подарок заказчик доволен",
     weight: "5",

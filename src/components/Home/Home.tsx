@@ -27,9 +27,6 @@ export const Home: React.FC = () => {
         </Col>
       </Row>
       <Row justify="space-around">
-        {/* <Col>
-          <Card />
-        </Col> */}
         {store.map((product) => (
           <Col>
             <Card product={product} />
