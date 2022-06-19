@@ -14,7 +14,8 @@ export const Card: React.FC<ICardProps> = ({ product }) => {
   const productClass = product.isAvailable
     ? "product"
     : "product product_not-available";
-  const cardClass = product.color === "pink" ? "card card_pink-bg" : "card";
+  const cardClass =
+    product.borderColor === "pink" ? "card card_pink-bg" : "card";
   const productLabelClass =
     product.label.color === "pink"
       ? "product__label product__label_pink-color"

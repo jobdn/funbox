@@ -6,10 +6,7 @@ import { CatalogTitle } from "../CatalogTitle";
 import { CatalogContent } from "../CatalogContent";
 
 const StyledCatalog = styled.div`
-  padding-top: 47px;
-  @media screen and (max-width: 425px) {
-    padding-top: 17px;
-  }
+  width: 100%;
 `;
 
 export const Catalog: React.FC = () => {

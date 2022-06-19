@@ -4,13 +4,13 @@ export interface IProduct {
   portionAmount: number;
   gift: string;
   weight: string;
-  color: AvailableColor;
+  borderColor: AvailableBorderColor;
   subtitleText: string;
   isAvailable: boolean;
   link?: ILink;
 }
 
-type AvailableColor = "blue" | "pink";
+type AvailableBorderColor = "blue" | "pink";
 type AvailableLabelColor = "grey" | "pink";
 
 interface ILink {
@@ -37,7 +37,7 @@ const store: IStore = {
       portionAmount: 10,
       gift: "мышь в подарок",
       weight: "0,5",
-      color: "blue",
+      borderColor: "blue",
       isAvailable: true,
       link: {
         href: "https://github.com/jobdn/funbox",
@@ -51,7 +51,7 @@ const store: IStore = {
       portionAmount: 40,
       gift: "2 мыши в подарок",
       weight: "2",
-      color: "blue",
+      borderColor: "blue",
       isAvailable: true,
       link: {
         href: "https://github.com/jobdn/funbox",
@@ -65,7 +65,7 @@ const store: IStore = {
       portionAmount: 100,
       gift: "5 мышей в подарок заказчик доволен",
       weight: "5",
-      color: "blue",
+      borderColor: "blue",
       isAvailable: true,
       link: {
         href: "https://github.com/jobdn/funbox",
@@ -79,7 +79,7 @@ const store: IStore = {
       portionAmount: 10,
       gift: "мышь в подарок",
       weight: "0,5",
-      color: "pink",
+      borderColor: "pink",
       isAvailable: true,
       subtitleText: "Печень утки разварная с артишоками.",
     },
@@ -89,7 +89,7 @@ const store: IStore = {
       portionAmount: 40,
       gift: "2 мыши в подарок",
       weight: "2",
-      color: "pink",
+      borderColor: "pink",
       isAvailable: true,
       subtitleText: "Головы щучьи с чесноком да свежайшая сёмгушка.",
     },
@@ -99,7 +99,7 @@ const store: IStore = {
       portionAmount: 100,
       gift: "5 мышей в подарок заказчик доволен",
       weight: "5",
-      color: "pink",
+      borderColor: "pink",
       isAvailable: true,
       subtitleText: "Филе из цыплят с трюфелями в бульоне.",
     },
@@ -109,7 +109,7 @@ const store: IStore = {
       portionAmount: 10,
       gift: "мышь в подарок",
       weight: "0,5",
-      color: "pink",
+      borderColor: "pink",
       isAvailable: true,
       subtitleText: "Печень утки разварная с артишоками.",
     },
@@ -119,7 +119,7 @@ const store: IStore = {
       portionAmount: 40,
       gift: "2 мыши в подарок",
       weight: "2",
-      color: "pink",
+      borderColor: "pink",
       isAvailable: true,
       subtitleText: "Головы щучьи с чесноком да свежайшая сёмгушка.",
     },
@@ -129,7 +129,7 @@ const store: IStore = {
       portionAmount: 100,
       gift: "5 мышей в подарок заказчик доволен",
       weight: "5",
-      color: "pink",
+      borderColor: "pink",
       isAvailable: true,
       subtitleText: "Филе из цыплят с трюфелями в бульоне.",
     },
@@ -139,7 +139,7 @@ const store: IStore = {
       portionAmount: 10,
       gift: "мышь в подарок",
       weight: "0,5",
-      color: "pink",
+      borderColor: "pink",
       isAvailable: false,
       subtitleText: `Печаль, с фуа-гра закончился.`,
     },
@@ -149,7 +149,7 @@ const store: IStore = {
       portionAmount: 40,
       gift: "2 мыши в подарок",
       weight: "2",
-      color: "pink",
+      borderColor: "pink",
       isAvailable: false,
       subtitleText: `Печаль, с рыбой закончился.`,
     },
@@ -159,7 +159,7 @@ const store: IStore = {
       portionAmount: 100,
       gift: "5 мышей в подарок заказчик доволен",
       weight: "5",
-      color: "pink",
+      borderColor: "pink",
       isAvailable: false,
       subtitleText: `Печаль, с курой закончился.`,
     },
