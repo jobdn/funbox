@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Home } from "./components/Home";
+import { Catalog } from "./components/Catalog";
 import mainBg from "./assets/main-bg.png";
 
 const StyledApp = styled.div`
@@ -13,7 +13,7 @@ const StyledApp = styled.div`
 const App: React.FC = () => {
   return (
     <StyledApp>
-      <Home />
+      <Catalog />
     </StyledApp>
   );
 };
