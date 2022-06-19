@@ -1,6 +1,6 @@
 $blue: #2ea8e6;
 $pink: #e52e7a;
-
+$yellow: #ffff66;
 .product {
   transition: 0.3s;
   user-select: none;
@@ -11,17 +11,21 @@ $pink: #e52e7a;
     margin: 0 5px 40px;
   }
 
-  &:hover {
-    transform: translateY(-5px);
-  }
-
   &_not-available {
     .card {
       filter: grayscale(80%);
       color: #b3b3b3 !important;
     }
     .subtitle {
-      color: rgba(255, 255, 102, 1) !important;
+      color: $yellow !important;
+    }
+  }
+
+  &_selected {
+    transform: translateY(-15px);
+    scale: 1.02;
+    .card {
+      background-color: $yellow !important;
     }
   }
 
@@ -36,6 +40,7 @@ $pink: #e52e7a;
     position: relative;
     clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%, 0 13%);
     border-radius: 12px;
+    transition: 0.3s;
 
     &__container {
       width: 312px;
@@ -154,3 +159,7 @@ $pink: #e52e7a;
     }
   }
 }
+
+// ._selected {
+//   transform: translateY(-5px);
+// }

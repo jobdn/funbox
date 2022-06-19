@@ -1,9 +1,12 @@
 import React from "react";
+import { Provider } from "react-redux";
+import { Row } from "antd";
 import styled from "styled-components";
 
 import { Catalog } from "./components/Catalog";
 import mainBg from "./assets/main-bg.png";
-import { Row } from "antd";
+
+import store from "./store";
 
 const StyledApp = styled(Row)`
   background: url(${mainBg}) center/cover no-repeat;
@@ -13,9 +16,11 @@ const StyledApp = styled(Row)`
 
 const App: React.FC = () => {
   return (
-    <StyledApp align="middle">
-      <Catalog />
-    </StyledApp>
+    <Provider store={store}>
+      <StyledApp align="middle">
+        <Catalog />
+      </StyledApp>
+    </Provider>
   );
 };
 

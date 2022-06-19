@@ -1,7 +1,8 @@
 import React from "react";
 import { Pagination, Row, Col } from "antd";
 
-import store, { ITEMS_ON_PAGE } from "../../store";
+import { ITEMS_ON_PAGE } from "../../store";
+import { useTypedSelector } from "../../hook/redux";
 
 interface IPaginationProps {
   currentPage: number;
@@ -12,6 +13,7 @@ export const ProductPagination: React.FC<IPaginationProps> = ({
   currentPage,
   handleChange,
 }) => {
+  const { products } = useTypedSelector((state) => state.products);
   const onPageChange = (page: number) => {
     handleChange(page);
   };
@@ -21,7 +23,7 @@ export const ProductPagination: React.FC<IPaginationProps> = ({
       <Col>
         <Pagination
           style={{ color: "#fff" }}
-          total={store.products.length}
+          total={products.length}
           defaultCurrent={currentPage}
           onChange={onPageChange}
           pageSize={ITEMS_ON_PAGE}

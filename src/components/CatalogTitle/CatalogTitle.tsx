@@ -2,23 +2,31 @@ import { Col, Row, Typography } from "antd";
 import React from "react";
 import styled from "styled-components";
 
-const StyledCatalogTitle = styled(Typography.Text)`
-  font-style: normal;
-  font-weight: 100;
-  font-size: 36px;
-  line-height: 44px;
+const StyledCatalogTitle = styled(Row)`
+  margin-bottom: 80px;
   @media screen and (max-width: 768px) {
-    font-size: 25px;
-    line-height: 40px;
+    margin-bottom: 30px;
+  }
+
+  /* ant */
+  .ant-typography {
+    color: #fff;
+    font-weight: 100;
+    font-size: 36px;
+    line-height: 44px;
+    @media screen and (max-width: 768px) {
+      font-size: 25px;
+      line-height: 40px;
+    }
   }
 `;
 
 export const CatalogTitle: React.FC = () => {
   return (
-    <Row justify="center" style={{ marginBottom: "25px" }}>
+    <StyledCatalogTitle justify="center">
       <Col>
-        <StyledCatalogTitle>Ты сегодня покормил кота?</StyledCatalogTitle>
+        <Typography.Text>Ты сегодня покормил кота?</Typography.Text>
       </Col>
-    </Row>
+    </StyledCatalogTitle>
   );
 };
