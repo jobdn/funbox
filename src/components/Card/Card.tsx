@@ -10,15 +10,15 @@ export const Card: React.FC = () => {
       <div className="card">
         <div className="card__container">
           <div className="card__info">
-            <div className="card__label">Сказочное заморское</div>
+            <div className="card__label">Сказочное заморское явство</div>
             <div className="card__title">
-              Нямушка <span>с фуагра</span>
+              Нямушка <span className="variety">с фуагра</span>
             </div>
             <div className="card__desc">
-              <span>10</span>
+              <span className="portion-amount">10</span>
               порций
               <br />
-              мышь в подарок
+              <div className="figt">мышь в подарок</div>
             </div>
           </div>
           <img className="card__img" src={cat} alt="cat" />
